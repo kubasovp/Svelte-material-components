@@ -1,5 +1,45 @@
+<a class={classes}>
+  {#if icon}
+  <i class="material-icons {iconAlign}">{icon}</i>
+  {/if} {text}
+</a>
 
-<h2>Raised</h2>
+<script>
+  export default {
+    computed: {
+      classes: ({
+        btn,
+        floating,
+        flat,
+        disabled,
+        waves,
+        size,
+        color,
+      }) => {
+        const classes = [];
+
+        btn && classes.push(`btn`);
+        floating && classes.push(`btn-floating`);
+        flat && classes.push(`btn-flat`);
+        disabled && classes.push(`disabled`);
+        waves && classes.push(`waves-effect waves-light`);
+        size && classes.push(`btn-${size}`);
+        color && classes.push(`${color}`);
+
+        return classes.join(' ');
+      }
+    }
+  };
+</script>
+
+<style>
+  
+</style>
+
+
+
+
+<!-- <h2>Raised</h2>
 <a class="waves-effect waves-light btn">button</a>
 <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
 <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
@@ -36,4 +76,4 @@ or modal so there aren't too many overlapping shadows.</p>
 <a class="btn disabled">Button</a>
 <a class="btn-flat disabled">Button</a>
 <a class="btn-floating disabled"><i class="material-icons">add</i></a>
-<p>This style can be applied to all button types</p>
+<p>This style can be applied to all button types</p> -->
