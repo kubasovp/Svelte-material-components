@@ -5,7 +5,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 const app = new App({
 	target: document.body,
 	data: {
-		name: 'world'
+		name: 'xxx'
 	}
 });
 
