@@ -1,39 +1,73 @@
-<h3 class="header">Raised</h3>
-<Button icon="cloud" iconAlign="right"></Button>
-<Button text="button" waves btn/>
-<Button text="button" icon="cloud" iconAlign="left" waves btn/>
-<Button text="button" icon="cloud" iconAlign="right" waves btn/>
+<div class="wrap">
+  <h3 class="header">Raised</h3>
+  <Button waves></Button>
+  <Button waves icon="cloud" iconAlign="left"></Button>
+  <Button waves icon="cloud" iconAlign="right"></Button>
+  <p class="code">
+    &lt;Button waves&gt;&lt;/Button&gt;<br>
+    &lt;Button waves icon="cloud" iconAlign="left"&gt;&lt;/Button&gt;<br>
+    &lt;Button waves icon="cloud" iconAlign="right"&gt;&lt;/Button&gt;
+  </p>
 
-<h3 class="header">Floating</h3>
-<Button text="button" icon="add" floating large waves red size="large" color="red"/>
-<p>Floating Action Button</p>
+  <h3 class="header">Floating</h3>
+  <p>Floating Action Button</p>
+  <Button floating large waves red size="large" color="red" icon="add"></Button>
+  <p class="code">
+    &lt;Button floating large waves red size="large" color="red" icon="add"&gt;&lt;/Button&gt;
+  </p>
 
-<h3 class="header">Flat</h3>
-<Button text="button" waves teal flat/>
-<p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
+  <h3 class="header">Flat</h3>
+  <p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
+  <Button waves teal flat></Button>
+  <p class="code">
+    &lt;Button waves teal flat&gt;&lt;/Button&gt;
+  </p>
 
-<h3 class="header">Submit Button</h3>
-<Button text="Submit" icon="send" iconAlign="right" waves btn type="submit" name="action" />
-<p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit.</p>
+  <h3 class="header">Submit Button</h3>
+  <p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit.</p>
+  <Button waves icon="send" iconAlign="right" type="submit" name="action" ></Button>
+  <Button waves=true icon="send" iconAlign="right" submit=true name="action"></Button>
+  <p class="code">
+    &lt;Button waves icon="send" iconAlign="right" type="submit" name="action"&gt;&lt;/Button&gt;<br>
+    or<br>
+    &lt;Button waves=true icon="send" iconAlign="right" submit=true name="action"&gt;&lt;/Button&gt;
+  </p>
 
-<h3 class="header">Large</h3>
-<Button text="button" size="large" waves btn/>
-<Button text="button" size="large" icon="cloud" iconAlign="left" waves btn/>
-<Button text="button" size="large" icon="cloud" iconAlign="right" waves btn/>
-<p>This button has a larger height for buttons that need more attention.</p>
+  <h3 class="header">Large</h3>
+  <p>This button has a larger height for buttons that need more attention.</p>
+  <Button waves size="large"></Button>
+  <Button waves size="large" icon="cloud" iconAlign="left"></Button>
+  <Button waves size="large" icon="cloud" iconAlign="right"></Button>
+  <p class="code">
+    &lt;Button waves size="large"&gt;&lt;/Button&gt;<br>
+    &lt;Button waves size="large" icon="cloud" iconAlign="left"&gt;&lt;/Button&gt;<br>
+    &lt;Button waves size="large" icon="cloud" iconAlign="right"&gt;&lt;/Button&gt;
+  </p>
 
-<h3 class="header">Small</h3>
-<Button text="button" size="small" waves btn/>
-<Button text="button" size="small" icon="cloud" iconAlign="left" waves btn/>
-<Button text="button" size="small" icon="cloud" iconAlign="right" waves btn/>
-<p>When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
+  <h3 class="header">Small</h3>
+  <p>When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
+  <Button waves size="small"></Button>
+  <Button waves size="small" icon="cloud" iconAlign="left"></Button>
+  <Button waves size="small" icon="cloud" iconAlign="right"></Button>
+  <p class="code">
+    &lt;Button waves size="small"&gt;&lt;/Button&gt;<br>
+    &lt;Button waves size="small" icon="cloud" iconAlign="left"&gt;&lt;/Button&gt;<br>
+    &lt;Button waves size="small" icon="cloud" iconAlign="right"&gt;&lt;/Button&gt;
+  </p>
 
-<h3 class="header">Disabled</h3>
-<Button text="button" size="large" btn disabled/>
-<Button text="button" btn disabled/>
-<Button text="button" flat disabled/>
-<Button text="button" icon="add" floating disabled />
-<p>This style can be applied to all button types.</p>
+  <h3 class="header">Disabled</h3>
+  <p>This style can be applied to all button types.</p>
+  <Button disabled size="large"></Button>
+  <Button disabled></Button>
+  <Button flat disabled></Button>
+  <Button floating disabled icon="add"></Button>
+  <p class="code">
+    &lt;Button disabled size="large"&gt;&lt;/Button&gt;<br>
+    &lt;Button disabled&gt;&lt;/Button&gt;<br>
+    &lt;Button flat disabled&gt;&lt;/Button&gt;<br>
+    &lt;Button floating disabled icon="add"&gt;&lt;/Button&gt;
+  </p>
+</div>
 
 <script>
   export default {
@@ -46,5 +80,14 @@
 </script>
 
 <style>
-
+  .wrap {
+    width: 1000px;
+    margin: auto;
+  }
+  .code {
+    padding: 5px;
+    background: #eee;
+    font-family: monospace;
+    font-size: 90%;
+  }
 </style>

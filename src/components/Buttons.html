@@ -1,39 +1,54 @@
-<button class="{classes}">
+{#if href}
+<a href={href} class="{classes}">
   {#if icon}
   <i class="material-icons {iconAlign}">{icon}</i>
   {/if}
-  <slot>{text}</slot>
+  <slot>button</slot>
+</a>
+{:else}
+<button class="{classes}" type="{submit ? 'submit' : 'button'}" name={name} disabled={disabled}>
+  {#if icon}
+  <i class="material-icons {iconAlign}">{icon}</i>
+  {/if}
+  <slot>button</slot>
 </button>
+{/if}
 
 <script>
   export default {
     data() {
       return {
-        text: 'button',
+        name: '',
+        href: '',
+        color: '',
+        size: '',
         icon: '',
         iconAlign: 'left',
+        floating: false,
+        flat: false,
+        disabled: false,
+        waves: false,
+        wavesColor: 'light'
       };
     },
     computed: {
       classes: ({
+        color,
+        size,
         floating,
         flat,
         disabled,
         waves,
-        teal,
-        size,
-        color,
+        wavesColor
       }) => {
         const classes = [];
-
         flat ? classes.push(`btn-flat`) : classes.push(`btn`);
         floating && classes.push(`btn-floating`);
         disabled && classes.push(`disabled`);
-        waves && classes.push(`waves-effect waves-light`);
-        teal && classes.push(`waves-teal`);
+        waves && classes.push(`waves-effect`);
+        wavesColor && classes.push(`waves-${wavesColor}`);
         size && classes.push(`btn-${size}`);
         color && classes.push(`${color}`);
-
         return classes.join(' ');
       }
     }
