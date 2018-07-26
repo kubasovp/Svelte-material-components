@@ -1,14 +1,21 @@
-<button class={classes}>
+<button class="{classes}">
   {#if icon}
   <i class="material-icons {iconAlign}">{icon}</i>
-  {/if} {text}
+  {/if}
+  <slot>{text}</slot>
 </button>
 
 <script>
   export default {
+    data() {
+      return {
+        text: 'button',
+        icon: '',
+        iconAlign: 'left',
+      };
+    },
     computed: {
       classes: ({
-        btn,
         floating,
         flat,
         disabled,
@@ -19,9 +26,8 @@
       }) => {
         const classes = [];
 
-        btn && classes.push(`btn`);
+        flat ? classes.push(`btn-flat`) : classes.push(`btn`);
         floating && classes.push(`btn-floating`);
-        flat && classes.push(`btn-flat`);
         disabled && classes.push(`disabled`);
         waves && classes.push(`waves-effect waves-light`);
         teal && classes.push(`waves-teal`);
