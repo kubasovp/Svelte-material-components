@@ -1,13 +1,53 @@
+<h3 class="header">Raised</h3>
 <Button text="button" waves btn/>
 <Button text="button" icon="cloud" iconAlign="left" waves btn/>
 <Button text="button" icon="cloud" iconAlign="right" waves btn/>
+
+<h3 class="header">Floating</h3>
+<Button text="button" icon="add" floating large waves red size="large" color="red"/>
+<p>Floating Action Button</p>
+
+<h3 class="header">Flat</h3>
+<Button text="button" waves teal flat/>
+<p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
+
+<h3 class="header">Submit Button</h3>
+<Button text="Submit" icon="send" iconAlign="right" waves btn type="submit" name="action" />
+<p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit.</p>
+
+<h3 class="header">Large</h3>
+<Button text="button" size="large" waves btn/>
+<Button text="button" size="large" icon="cloud" iconAlign="left" waves btn/>
+<Button text="button" size="large" icon="cloud" iconAlign="right" waves btn/>
+<p>This button has a larger height for buttons that need more attention.</p>
+
+<h3 class="header">Small</h3>
+<Button text="button" size="small" waves btn/>
+<Button text="button" size="small" icon="cloud" iconAlign="left" waves btn/>
+<Button text="button" size="small" icon="cloud" iconAlign="right" waves btn/>
+<p>When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
+
+<h3 class="header">Disabled</h3>
+<Button text="button" size="large" btn disabled/>
+<Button text="button" btn disabled/>
+<Button text="button" flat disabled/>
+<Button text="button" icon="add" floating disabled />
+<p>This style can be applied to all button types.</p>
 
 <script>
   export default {
     components: {
       Button: './components/Buttons.html'
-    }
+    },
+    // data() {
+    //   return {
+    //     text: 'button',
+    //     icon: '',
+    //     iconAlign: 'left'     
+    //   }
+    // }
   };
+  
 	
 </script>
 
