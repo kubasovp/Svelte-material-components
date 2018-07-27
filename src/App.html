@@ -1,5 +1,10 @@
 <div class="wrap">
-  <h3 class="header">Raised</h3>
+  <h1>Material design buttons for Svelte</h1>
+  <p>Кнопки в стиле материального дизайна для <a href="https://svelte.technology/">«исчезающего» фреймворка Svelte</a>.</p>
+  <p>Дизайн кнопок взят с <a href="https://materializecss.com/buttons.html">https://materializecss.com/buttons.html</a>.</p>
+  <p>Код на <a href="https://github.com/kubasovp/svelte-material-components">GitHub</a>.</p>
+   
+  <h3 class="header">Просто кнопка (Raised)</h3>
   <Button waves></Button>
   <Button waves icon="cloud" iconAlign="left"></Button>
   <Button waves icon="cloud" iconAlign="right"></Button>
@@ -9,32 +14,34 @@
     &lt;Button waves icon="cloud" iconAlign="right"&gt;&lt;/Button&gt;
   </p>
 
-  <h3 class="header">Floating</h3>
+  <h3 class="header">Плавающая кнопка (Floating)</h3>
   <p>Floating Action Button</p>
-  <Button floating large waves red size="large" color="red" icon="add"></Button>
+  <Button floating waves size="large" color="red" icon="add"></Button>
   <p class="code">
-    &lt;Button floating large waves red size="large" color="red" icon="add"&gt;&lt;/Button&gt;
+    &lt;Button floating waves size="large" color="red" icon="add"&gt;&lt;/Button&gt;
   </p>
 
-  <h3 class="header">Flat</h3>
-  <p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
+  <h3 class="header">Плоская кнопка (Flat)</h3>
+  <p>Обычно используется для уменьшения визуального шума внутри карточки или модального окна.</p>
+  <p class="en">Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
   <Button waves teal flat></Button>
   <p class="code">
-    &lt;Button waves teal flat&gt;&lt;/Button&gt;
+    &lt;Button waves flat&gt;&lt;/Button&gt;
   </p>
 
-  <h3 class="header">Submit Button</h3>
-  <p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit.</p>
+  <h3 class="header">Кнопка отправки (Submit Button)</h3>
+  <p>Для отправки формы используйте тег &lt;button type="submit"&gt; вместо &lt;input type="submit"&gt;.</p>
+  <p class="en">When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit.</p>
   <Button waves icon="send" iconAlign="right" type="submit" name="action" ></Button>
   <Button waves=true icon="send" iconAlign="right" submit=true name="action"></Button>
   <p class="code">
     &lt;Button waves icon="send" iconAlign="right" type="submit" name="action"&gt;&lt;/Button&gt;<br>
-    or<br>
     &lt;Button waves=true icon="send" iconAlign="right" submit=true name="action"&gt;&lt;/Button&gt;
   </p>
 
-  <h3 class="header">Large</h3>
-  <p>This button has a larger height for buttons that need more attention.</p>
+  <h3 class="header">Большая кнопка (Large)</h3>
+  <p>Большая кнопка привлекает внимание :)</p>
+  <p class="en">This button has a larger height for buttons that need more attention.</p>
   <Button waves size="large"></Button>
   <Button waves size="large" icon="cloud" iconAlign="left"></Button>
   <Button waves size="large" icon="cloud" iconAlign="right"></Button>
@@ -44,8 +51,9 @@
     &lt;Button waves size="large" icon="cloud" iconAlign="right"&gt;&lt;/Button&gt;
   </p>
 
-  <h3 class="header">Small</h3>
-  <p>When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
+  <h3 class="header">Маленькая кнопка (Small)</h3>
+  <p>Маленькие кнопки удобнее для более плотной компоновки элементов интерфейса.</p>
+  <p class="en">When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
   <Button waves size="small"></Button>
   <Button waves size="small" icon="cloud" iconAlign="left"></Button>
   <Button waves size="small" icon="cloud" iconAlign="right"></Button>
@@ -55,8 +63,9 @@
     &lt;Button waves size="small" icon="cloud" iconAlign="right"&gt;&lt;/Button&gt;
   </p>
 
-  <h3 class="header">Disabled</h3>
-  <p>This style can be applied to all button types.</p>
+  <h3 class="header">Выключенная кнопка (Disabled)</h3>
+  <p>Этот стиль можно применить ко всем типам кнопок.</p>
+  <p class="en">This style can be applied to all button types.</p>
   <Button disabled size="large"></Button>
   <Button disabled></Button>
   <Button flat disabled></Button>
@@ -84,8 +93,18 @@
     width: 1000px;
     margin: auto;
   }
+  h1 {
+    font-size: 250%;
+  }
+  h3.header {
+    font-size: 170%;
+  }
+  .en {
+    color: #555;
+    font-style: italic;
+  }
   .code {
-    padding: 5px;
+    padding: 5px 10px;
     background: #eee;
     font-family: monospace;
     font-size: 90%;
