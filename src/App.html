@@ -5,9 +5,10 @@
   <p>Код на <a href="https://github.com/kubasovp/svelte-material-components">GitHub</a>.</p>
    
   <h3 class="header">Просто кнопка (Raised)</h3>
-  <Button waves autofocus=true></Button>
+  <Button waves></Button>
   <Button waves icon="cloud" iconAlign="left"></Button>
-  <Button waves icon="cloud" iconAlign="right"></Button>
+  <Button waves floating size="large" color="red" icon="add"></Button>
+  <!-- <Button waves icon="cloud" iconAlign="right"></Button> -->
   <p class="code">
     &lt;Button waves&gt;&lt;/Button&gt;<br>
     &lt;Button waves icon="cloud" iconAlign="left"&gt;&lt;/Button&gt;<br>
@@ -15,11 +16,11 @@
   </p>
 
   <h3 class="header">Cсылки в виде просто кнопки</h3>
-  <Link href="#foo" waves>Link_0</Link>
-  <Link href="#bar" waves icon="cloud">Link_1</Link>
-  <Link href="#qux" waves flat>Link_2</Link>
-  <Link href="#baz" waves icon="cloud" iconAlign="right">Link_3</Link>
-  <Link href="#foo" waves floating size="large" color="red" icon="add"/>
+  <Button href="#foo" waves>Link_0</Link>
+  <Button href="#bar" waves icon="cloud">Link_1</Link>
+  <Button href="#qux" waves flat>Link_2</Link>
+  <Button href="#baz" waves icon="cloud" iconAlign="right">Link_3</Link>
+  <Button href="#foo" waves floating size="large" color="red" icon="add"/>
   
   <p class="code">
     &lt;Link href="#foo" waves&gt; Link_0 &lt;/Link&gt;<br>
@@ -96,7 +97,6 @@
 
   export default {
     components: {
-      Link: Button,
       Button
     }
   };
