@@ -3,14 +3,16 @@
   <p>Кнопки в стиле материального дизайна для <a href="https://svelte.technology/">«исчезающего» фреймворка Svelte</a>.</p>
   <p>Дизайн кнопок взят с <a href="https://materializecss.com/buttons.html">https://materializecss.com/buttons.html</a>.</p>
   <p>Код на <a href="https://github.com/kubasovp/svelte-material-components">GitHub</a>.</p>
-   
+  
+  <p>Count: {count}</p>
+
   <h3 class="header">Просто кнопка (Raised)</h3>
-  <Button waves></Button>
-  <Button waves icon="cloud" iconAlign="left"></Button>
+  <Button on:click="set({ count: count + 1 })" waves>Button++</Button>
+  <Button on:click="set({ count: count - 1 })" waves icon="cloud" iconAlign="left">Button--</Button>
   <Button waves icon="cloud" iconAlign="right"></Button>
   <p class="code">
-    &lt;Button waves&gt;&lt;/Button&gt;<br>
-    &lt;Button waves icon="cloud" iconAlign="left"&gt;&lt;/Button&gt;<br>
+    &lt;Button on&#58;click="set(&#123; count&#58; count + 1 })" waves&gt;Button++&lt;/Button&gt;<br>
+    &lt;Button on&#58;click="set(&#123; count&#58; count - 1 })" waves icon="cloud" iconAlign="left"&gt;Button--&lt;/Button&gt;<br>
     &lt;Button waves icon="cloud" iconAlign="right"&gt;&lt;/Button&gt;
   </p>
 
@@ -94,6 +96,11 @@
   import Button from './components/Buttons.html';
 
   export default {
+    data() {
+      return {
+        count: 3
+      };
+    },
     components: {
       Button
     }

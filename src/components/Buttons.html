@@ -1,37 +1,12 @@
 {#if href}
-<a class="{classes}"
-   {href}
-   {accesskey}
-   {type}
-   {name}
-   {coords}
-   {hreflang}
-   {rel}
-   {rev}
-   {shape}
-   {tabindex}
-   {target}
-   {title}
-   >
+<a on:click class="{classes}" {href} {title} >
   {#if icon}
   <i class="material-icons {iconAlign}">{icon}</i>
   {/if}
   <slot>button</slot>
 </a>
 {:else}
-<button class="{classes}"
-        {type}
-        {name}
-        {value}
-        {disabled}
-        {autofocus}
-        {accesskey}
-        {formaction}
-        {formenctype}
-        {formmethod}
-        {formnovalidate}
-        {formtarget}
-        >
+<button on:click class="{classes}" {type} {name} {disabled} >
   {#if icon}
   <i class="material-icons {iconAlign}">{icon}</i>
   {/if}
@@ -54,23 +29,8 @@
         type: '',// button or link attr
         href: '',
         name: '',
-        value: '',
         disabled: false,
-        autofocus: false,
-        accesskey: '',
-        formaction: '',
-        formenctype: 'application/x-www-form-urlencoded',
-        formmethod: '',
-        formnovalidate: '',
-        formtarget: '',
         href: '', // only link attr
-        coords: '',
-        hreflang: '',
-        rel: '',
-        rev: '',
-        shape: '',
-        tabindex: '',
-        target: '',
         title: ''
       };
     },
